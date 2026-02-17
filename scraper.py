@@ -48,20 +48,6 @@ def parse_job_cards(html):
 
     return jobs
 
-''' TESTING
-html = fetch_page(URL)
-jobs = parse_job_cards(html)
-
-print(f"Found {len(jobs)} jobs.")
-print()
-print("First 3 listings:")
-for job in jobs[:3]:
-    print(f"  Title:   {job['title']}")
-    print(f"  Company: {job['company']}")
-    print(f"  Location:{job['location']}")
-    print(f"  Link:    {job['apply_link']}")
-    print()
-'''
 
 def save_to_csv(jobs, filename):
     """Writes a list of job dictionaries to a CSV file."""
@@ -83,4 +69,5 @@ if __name__ == "__main__":
         print(f"Saved results to {OUTPUT_FILE}")
     else:
         print("No jobs found - nothing to save")
+
 
